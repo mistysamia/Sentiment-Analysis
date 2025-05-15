@@ -18,7 +18,7 @@ Both models are trained and evaluated using the training and validation data, th
 - Unsupervised model is saved to: `model/2400570/model_unsup`
 - Discriminative model is saved to: `model/2400570/model_dis`
 
-Once trained, the models are reused for predictions on the test set — **no need to retrain**. The `test.csv` file is updated with predicted sentiment labels for both approaches.
+Once trained, the models are reused for predictions on the test set, **no need to retrain**. The `test.csv` file is updated with predicted sentiment labels for both approaches.
 
 
 ---
