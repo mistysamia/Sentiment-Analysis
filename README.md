@@ -1,6 +1,25 @@
 # Sentiment Analysis Project
 
-This project performs sentiment analysis using two approaches: an **unsupervised** method and a **discriminative** method. It includes model training, evaluation, and prediction, with the trained models saved for future testing.
+This project focuses on sentiment analysis using two different techniques:
+
+- **Unsupervised approach**: Learns sentiment patterns from raw text data without using labeled sentiment.
+- **Discriminative approach**: Uses labeled data to directly classify the sentiment of a given text.
+
+The dataset is divided into three parts:
+
+- `train.csv`: Contains `sentiment`, `text`, and `data_id` columns for training.
+- `valid.csv`: Similar format used for validation.
+- `test.csv`: Contains `text` and `data_id`, where we need to predict and fill two new columns:
+  - `out_label_model_1`: Predictions from the **unsupervised model**.
+  - `out_label_model_2`: Predictions from the **discriminative model**.
+
+Both models are trained and evaluated on the training/validation data, then saved to disk:
+
+- Unsupervised model is saved to: `model/2400570/model_unsup`
+- Discriminative model is saved to: `model/2400570/model_dis`
+
+Once the models are trained and saved, they are automatically used during testing to generate predictions for the test set — **no need to retrain**. The `test.csv` file is then updated with predicted sentiment labels from both approaches.
+
 
 ---
 
@@ -67,7 +86,7 @@ pip install pandas==2.2.2 numpy==1.26.4 seaborn==0.13.2 matplotlib==3.8.0 tensor
 2. Models will be trained and saved to their respective paths:
    - Unsupervised: `model/2400570/model_unsup`
    - Discriminative: `model/2400570/model_dis`
-3. Once saved, the trained models will automatically be used during the testing phase — retraining is not necessary unless the models are deleted.
+3. Once saved, the trained models will automatically be used during the testing phase, retraining is not necessary unless the models are deleted.
 4. The `test.csv` file will be updated with the predicted sentiment labels:
    - `out_label_model_1`: from the unsupervised model
    - `out_label_model_2`: from the discriminative model
