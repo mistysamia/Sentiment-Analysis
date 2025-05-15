@@ -7,18 +7,18 @@ This project focuses on sentiment analysis using two different techniques:
 
 The dataset is divided into three parts:
 
-- `train.csv`: Contains `sentiment`, `text`, and `data_id` columns for training.
-- `valid.csv`: Similar format used for validation.
-- `test.csv`: Contains `text` and `data_id`, where we need to predict and fill two new columns:
-  - `out_label_model_1`: Predictions from the **unsupervised model**.
-  - `out_label_model_2`: Predictions from the **discriminative model**.
+- `train.csv`: Contains `sentiment`, `text`, and `data_id` columns. `data_id` is simply a dataset identifier and can be ignored during training.
+- `valid.csv`: Same structure as `train.csv` and used for model validation.
+- `test.csv`: Contains `text` and `data_id`, along with two columns to be predicted:
+  - `out_label_model_1`: Predictions from the **unsupervised model**
+  - `out_label_model_2`: Predictions from the **discriminative model**
 
-Both models are trained and evaluated on the training/validation data, then saved to disk:
+Both models are trained and evaluated using the training and validation data, then saved locally:
 
 - Unsupervised model is saved to: `model/2400570/model_unsup`
 - Discriminative model is saved to: `model/2400570/model_dis`
 
-Once the models are trained and saved, they are automatically used during testing to generate predictions for the test set — **no need to retrain**. The `test.csv` file is then updated with predicted sentiment labels from both approaches.
+Once trained, the models are reused for predictions on the test set — **no need to retrain**. The `test.csv` file is updated with predicted sentiment labels for both approaches.
 
 
 ---
