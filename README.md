@@ -66,6 +66,21 @@ Predictions are required for:
 ```bash
 pip install pandas==2.2.2 numpy==1.26.4 seaborn==0.13.2 matplotlib==3.8.0 tensorflow==2.17.1 nltk==3.9.1 scikit-learn==1.6.0 spacy==3.7.5 gensim==4.3.3
 ```
+### NLTK Resources Download
+
+These resources are required for text preprocessing. Run once before training:
+
+```python
+import nltk
+
+nltk.download("stopwords")
+nltk.download("wordnet")
+nltk.download("omw-1.4")
+nltk.download("cmudict")
+nltk.download("punkt")
+nltk.download("punkt_tab")
+
+
 
 ## Project Setup Instructions
 
