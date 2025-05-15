@@ -60,11 +60,17 @@ Predictions are required for:
 - `scikit-learn==1.6.0`
 - `spacy==3.7.5`
 - `gensim==4.3.3`
+- `torch==2.3.0`
+- `sentence-transformers==2.7.0`
+- `bertopic==0.16.0`
+- `hdbscan==0.8.33`
+- `imbalanced-learn==0.12.2`
 
 ### Installation:
 
 ```bash
-pip install pandas==2.2.2 numpy==1.26.4 seaborn==0.13.2 matplotlib==3.8.0 tensorflow==2.17.1 nltk==3.9.1 scikit-learn==1.6.0 spacy==3.7.5 gensim==4.3.3
+pip install pandas==2.2.2 numpy==1.26.4 seaborn==0.13.2 matplotlib==3.8.0 tensorflow==2.17.1 nltk==3.9.1 scikit-learn==1.6.0 spacy==3.7.5 gensim==4.3.3 torch==2.3.0 sentence-transformers==2.7.0 bertopic==0.16.0 hdbscan==0.8.33 imbalanced-learn==0.12.2
+
 ```
 ### NLTK Resources Download
 
@@ -79,8 +85,7 @@ nltk.download("omw-1.4")
 nltk.download("cmudict")
 nltk.download("punkt")
 nltk.download("punkt_tab")
-
-
+```
 
 ## Project Setup Instructions
 
